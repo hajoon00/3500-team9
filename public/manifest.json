@@ -10,6 +10,12 @@
     "192": "images/android-chrome-192x192.png",
     "512": "images/android-chrome-512x512.png"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/logo.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "offline_enabled": true,
   "permissions": ["storage", "activeTab", "contextMenus"],
   "background": {

@@ -1,10 +1,168 @@
 .App {
     color: black;
     text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: red;
 }
 
 .container {
   width: 400px;
+  height: 800px;
   padding: 1rem;
+  background-color: whitesmoke;
+  border: 5px solid #E63B32;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.app-logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 12px;
+}
+
+/* 2. Restaurant Info */
+.restaurant-info {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.preview-photo {
+  width: 96px;
+  height: 96px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+.details h2 {
+  margin: 0 0 4px;
+}
+.address {
+  margin: 0 0 8px;
+  color: #666;
+  font-size: 0.9em;
+}
+.meta {
+  font-size: 0.9em;
+}
+.meta a {
+  text-decoration: underline;
+  margin-right: 8px;
+  color: #0073bb;
+}
+.star {
+  color: #f5a623;
+}
+
+.summarize-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Button styling */
+.summarize-control button {
+  padding: 10px 20px;
   background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Disabled button state */
+.summarize-control button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Hover effect */
+.summarize-control button:not(:disabled):hover {
+  background-color: lightgray;
+}
+
+/* Error message styling */
+.summarize-control .error {
+  color: #d32323; /* Yelp-like red */
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 3. Summary Controls */
+.summary-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.controls button {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.controls .active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* 4. Good/Bad Bar */
+.rating-bar .good-label {
+  white-space: nowrap;
+}
+
+.rating-bar .bar {
+  flex: 1;                   
+  max-width: 200px;         
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.rating-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.bad-label, .good-label {
+  width: 40px;
+  text-align: center;
+  font-size: 0.85em;
+}
+.bar {
+  flex: 1;
+  height: 8px;
+  background: #ddd;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: #444;
+}
+
+/* 5. Summary Sections */
+.summaries .summary-block {
+  margin-bottom: 24px;
+}
+.summaries h3 {
+  margin-bottom: 8px;
 }
