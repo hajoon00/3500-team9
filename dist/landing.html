@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Yelper!</title>
+</head>
+<body>
+  <h1>Welcome to Yelper!</h1>
+  <p>Thanks for installing. Please enter an OpenAI API Key to start using.</p>
+  <form id="openAIKeyForm">
+    <input type="text" id="openAIKey" placeholder="OpenAI API Key" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('start').addEventListener('click', () => {
+      window.close(); // Closes landing page tab
+    });
+  </script>
+</body>
+</html>

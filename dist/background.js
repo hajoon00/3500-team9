@@ -63,4 +63,20 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   }
 });
 
+// Add feature for landing page to get GPT API key
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === "install") {
+    chrome.tabs.create({ url: "landing.html" });
+  }
+});
+
+// check to make sure the landing page is only shown once
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === "install") {
+    chrome.storage.local.set({ hasSeenLanding: true });
+    chrome.tabs.create({ url: "landing.html" });
+  }
+});
+
+
 console.log('Review summarizer background script loaded');
