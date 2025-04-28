@@ -56,11 +56,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 // Check if landing page has been seen
-chrome.storage.local.get("hasSeenLanding", (data) => {
-    if (!data.hasSeenLanding) {
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.local.get("hasSeenLanding", (data) => {
+      if (!data.hasSeenLanding) {
         chrome.tabs.create({ url: "landing.html" });
-    }
+      }
+    });
   });
+  
 
 // Initialize when the document is loaded
 document.addEventListener('DOMContentLoaded', initialize);
