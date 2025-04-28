@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   } else if (message.action === "saveAPIKey") {
     const input = message.data;
     console.log('Saving API Key:', input);
-    chrome.storage.local.set({ userInput: input }, () => {
+    chrome.storage.local.set({ apiKey: input }, () => {
       console.log('API Key saved!');
     });
     sendResponse({ success: true });
