@@ -75,16 +75,6 @@ function App() {
 
       {summary && (
         <>
-        {/* Summary Controls */}
-        <section className="summary-controls">
-          <span>Summary based on</span>
-          <div className="controls">
-            <span>{restaurant.summaryCount} reviews</span>
-          </div>
-        </section>
-
-        
-
         {/* Percentage Good/Bad Bar */}
         <section className="rating-bar">
           <div className="bar">
