@@ -15,11 +15,8 @@ export default defineConfig({
           mkdirSync('dist', { recursive: true });
         }
         
-        // Copy manifest.json
-        copyFileSync('public/manifest.json', 'dist/manifest.json');
-        
-        // Copy background.js
-        copyFileSync('public/background.js', 'dist/background.js');
+        // Copy manifest.json from src
+        copyFileSync('src/manifest.json', 'dist/manifest.json');
         
         // Copy images folder (recursive copy not implemented here, 
         // you may need to enhance this for complex directory structures)
@@ -35,6 +32,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        background: resolve(__dirname, 'src/background.ts'),
+      },
+      output: {
+        entryFileNames: (chunkInfo) => {
+          return chunkInfo.name === 'background' ? 'background.js' : '[name].js';
+        },
       },
     },
   },
