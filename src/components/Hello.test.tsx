@@ -8,4 +8,10 @@ describe("Hello", () => {
     render(<Hello person={personName} />);
     expect(screen.getByText(`Hello ${personName}`)).toBeInTheDocument();
   });
+  
+  it("applies correct class to the greeting element", () => {
+    render(<Hello person="Alice" />);
+    const heading = screen.getByRole('heading', { name: 'Hello Alice' });
+    expect(heading).toHaveClass('hello-greeting');
+  });
 });
