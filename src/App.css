@@ -31,7 +31,9 @@ body {
 }
 
 .container {
-  padding: 0 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Header Styles */
@@ -178,9 +180,11 @@ button:disabled {
 
 /* Error Message */
 .error {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffebee;
   color: var(--error-color);
-  font-size: 14px;
-  margin-top: 8px;
+  border-radius: 4px;
 }
 
 /* Loading State */
@@ -271,22 +275,194 @@ button:disabled {
 .save-api-key-button {
   flex: 1;
   min-width: auto;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-api-key-button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
 }
 
 .cancel-button {
   background-color: transparent;
   color: var(--text-light);
   border: 1px solid var(--border-color);
-  min-width: auto;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .cancel-button:hover {
   background-color: var(--border-color);
 }
 
-.api-key-message {
-  font-size: 14px;
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.generate-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.generate-button:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+}
+
+.suggestions-container {
+  margin-top: 30px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.suggestions-title {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 16px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.suggestions {
+  padding: 20px;
+}
+
+.night-plan-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.night-plan-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stop-info {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.stop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stop-name {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.stop-order {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stop-address {
   color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.stop-explanation {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 14px;
+  padding: 8px;
+  background-color: #f1f8e9;
+  border-radius: 4px;
+  border: 1px solid #c5e1a5;
+}
+
+.routing-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: 8px 0;
+  color: var(--primary-color);
+}
+
+.routing-arrow:before {
+  content: "↓";
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.routing-info {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: var(--text-color);
+  font-size: 14px;
   text-align: center;
-  margin-top: 8px;
 }
