@@ -121,3 +121,26 @@ The initial setup of this project was based on the tutorial by [Harshita Joshi](
 Further setup was done by [Michelle Chang](https://github.com/michellechang02) by replacing the Webpack initialization of the app with Vite.
 
 The project has been extended with additional functionality, testing setup, and documentation. The most difficult part was figuring out the right combination of packages for the testing suite (for instance, I would avoid `jest-chrome`, `mockzilla`, `mockzilla-webextension`, to name but a few).
+
+## Features
+- Manage and store your OpenAI API key directly in the extension (save, edit, cancel).
+- Input a restaurant URL to generate a concise night-out plan (Dessert, Drinks, Dancing/Live Music).
+- Fetch recommendations via OpenAI's Chat Completions API and display formatted suggestions with place name, address, visit order, routing instructions, and rationale.
+- Responsive React-based popup UI built with TypeScript and Vite.
+- Background service worker handling storage events and future context-menu integrations.
+
+## Team Members and Responsibilities
+- [Name] – Frontend development, UI/UX design, and React component implementation.
+- [Name] – Prompt engineering, OpenAI API integration, and chat message formatting.
+- [Name] – Testing strategy, writing unit/manual tests, and quality assurance.
+- [Name] – Documentation, maintenance, and project coordination.
+
+## Known Bugs and Incomplete Features
+- Prompt parsing may occasionally mis-split sections when unexpected line breaks occur.
+- No automated UI/integration tests yet (manual interface testing only).
+- Context-menu integration is scaffolded but not fully implemented within the page context.
+- Error handling could be enhanced for network failures or rate limits from the OpenAI API.
+- Support for additional planning categories (e.g., Late-night Eats) not yet added.
+
+## Basic Testing Documentation
+Bare-bones testing information is maintained in [TESTING.md](TESTING.md), including manual interface walkthroughs and prompt test cases.
