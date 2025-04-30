@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Nightlife Planner",
+  "version": "1.0",
+  "description": "Generate nightlife plans based on restaurant locations",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  }
+} 
