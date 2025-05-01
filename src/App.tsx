@@ -14,9 +14,9 @@ function App() {
   // Load API key on component mount
   useEffect(() => {
     chrome.storage.local.get(["apiKey"], (result) => {
-      // Load existing API key into input, but do not mark as saved until user clicks Save
       if (result.apiKey) {
         setApiKey(result.apiKey);
+        setIsApiKeySaved(true);
       }
     });
   }, []);
@@ -185,7 +185,7 @@ why_this_stop: One-sentence explanation of why it fits at that point in the nigh
     <div className="App">
       <header className="app-header">
         <img src={logoUrl} alt="Logo" className="app-logo" />
-        <h1>Yelper</h1>
+        <h1>Night Planner</h1>
       </header>
 
       <div className="container">
