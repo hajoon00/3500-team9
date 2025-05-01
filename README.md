@@ -110,10 +110,27 @@ why_this_stop: One-sentence explanation of why it fits at that point in the nigh
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Support
 
-For support, please open an issue in the GitHub repository or contact the maintainers.
+The project has been extended with additional functionality, testing setup, and documentation. The most difficult part was figuring out the right combination of packages for the testing suite (for instance, I would avoid `jest-chrome`, `mockzilla`, `mockzilla-webextension`, to name but a few).
+
+## Features
+- Manage and store your OpenAI API key directly in the extension (save, edit, cancel).
+- Input a restaurant URL to generate a concise night-out plan (Dessert, Drinks, Dancing/Live Music).
+- Fetch recommendations via OpenAI's Chat Completions API and display formatted suggestions with place name, address, visit order, routing instructions, and rationale.
+- Responsive React-based popup UI built with TypeScript and Vite.
+- Background service worker handling storage events and future context-menu integrations.
+
+## Team Members and Responsibilities
+- Chorlotte – Frontend development, UI/UX design, and React component implementation.
+- Hajoon – Frontend, Prompt engineering, OpenAI API integration, and chat message formatting.
+- Carson – Landing Page, testing strategy, writing unit/manual tests, and quality assurance.
+- Ava – OpenAI API integration, documentation, maintenance, and project coordination.
+
+## Known Bugs and Incomplete Features
+- Prompt parsing may occasionally mis-split sections when unexpected line breaks occur.
+- No automated UI/integration tests yet (manual interface testing only).
+- Error handling could be enhanced for network failures or rate limits from the OpenAI API.
+- Support for additional planning categories (e.g., Late-night Eats) not yet added.
+- OpenAI database has limited access to google map.
+

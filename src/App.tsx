@@ -14,9 +14,9 @@ function App() {
   // Load API key on component mount
   useEffect(() => {
     chrome.storage.local.get(["apiKey"], (result) => {
+      // Load existing API key into input, but do not mark as saved until user clicks Save
       if (result.apiKey) {
         setApiKey(result.apiKey);
-        setIsApiKeySaved(true);
       }
     });
   }, []);
