@@ -1,7 +1,7 @@
 <!--- TESTING.md: Interface and Prompt Testing Documentation --->
 # Testing Documentation
 
-This document outlines the manual and prompt testing approaches for the Yelper Chrome extension.
+This document outlines the manual and prompt testing approaches for the Night Planner Chrome extension.
 
 ## Testing Approach
 - Interface testing is performed via manual walkthroughs in a loaded extension in Chrome.

@@ -9,7 +9,7 @@ describe("App Component", () => {
 
   it("renders the Yelper heading", () => {
     render(<App />);
-    expect(screen.getByText(/Yelper/i)).toBeInTheDocument();
+    expect(screen.getByText(/Night Planner/i)).toBeInTheDocument();
   });
 
   it("renders API key input and disabled Save button initially", () => {
